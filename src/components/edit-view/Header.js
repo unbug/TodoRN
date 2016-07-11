@@ -13,8 +13,7 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.bg}
-              source={require('./img/chalkboard.png')}>
+        <View style={styles.bg}>
           <Image style={styles.img} source={require('./img/todo.png')}/>
           <Text style={[styles.text, styles.title]}>
             Todo
@@ -22,8 +21,7 @@ class Header extends Component {
           <Text style={[styles.text, styles.subTitle]}>
             React+Redux DEMO for React Native Training
           </Text>
-          <Image style={styles.add} source={require('./img/border_color.png')}/>
-        </Image>
+        </View>
       </View>
     );
   }
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
     width: width,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'transparent'
+    backgroundColor: '#000000'
   },
   img: {
     width: 100,
@@ -56,11 +54,6 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 20/2,
     fontStyle: 'italic'
-  },
-  add: {
-    position: 'absolute',
-    right: 8,
-    bottom: 8
   }
 });
 

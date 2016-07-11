@@ -49,14 +49,14 @@ class MainTabsView extends Component {
           </View>
         </TabNavigator.Item>
         <TabNavigator.Item
-          title="About"
+          title="Book"
           selected={tab === 2}
           onPress={()=> this.handleSwitchTab(2)}
-          renderIcon={() => <Image source={require('../components/main-tabs-view/img/info.png') }/>}
-          renderSelectedIcon={() => <Image source={require('../components/main-tabs-view/img/info_filled.png') }/>}
+          renderIcon={() => <Image source={require('../components/main-tabs-view/img/bookmark.png') }/>}
+          renderSelectedIcon={() => <Image source={require('../components/main-tabs-view/img/bookmark_filled.png') }/>}
           >
           <View style={styles.itemView}>
-            <BroswerView url="https://www.gitbook.com/book/unbug/react-native-training/details" title="About React Native Training"/>
+            <BroswerView url="https://www.gitbook.com/book/unbug/react-native-training/details" title="React Native Training"/>
           </View>
         </TabNavigator.Item>
       </TabNavigator>
