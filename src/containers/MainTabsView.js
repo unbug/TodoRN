@@ -56,7 +56,7 @@ class MainTabsView extends Component {
           renderSelectedIcon={() => <Image source={require('../components/main-tabs-view/img/bookmark_filled.png') }/>}
           >
           <View style={styles.itemView}>
-            <BroswerView url="https://www.gitbook.com/book/unbug/react-native-training/details" title="React Native Training"/>
+            <BroswerView url="https://unbug.gitbooks.io/react-native-training/content/" title="React Native Training"/>
           </View>
         </TabNavigator.Item>
       </TabNavigator>
