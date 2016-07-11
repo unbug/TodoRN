@@ -5,6 +5,7 @@ import {
   View,
 } from 'react-native';
 import {COLOR_GREEN} from '../../constants/Theme';
+
 class TitleBar extends Component {
   render() {
     return (

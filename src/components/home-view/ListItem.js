@@ -7,6 +7,7 @@ import {
   Image,
   Dimensions
 } from 'react-native';
+import {COLOR_BROWN} from '../../constants/Theme';
 
 class ListItem extends Component {
   render() {
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
     borderBottomWidth: 1,
-    borderBottomColor: 'gray'
+    borderBottomColor: COLOR_BROWN
   },
   body: {
     flex: 1,
