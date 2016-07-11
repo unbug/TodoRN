@@ -1,0 +1,21 @@
+{
+  "name": "TodoRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "15.2.1",
+    "react-native": "0.29.0",
+    "react-native-tab-navigator": "^0.3.2",
+    "react-redux": "~4.3.0",
+    "react-relay": "~0.7.3",
+    "react-timer-mixin": "~0.13.3",
+    "redux": "~3.2.1",
+    "redux-logger": "~2.5.0",
+    "redux-persist": "~1.5.0",
+    "redux-thunk": "~1.0.3",
+    "reselect": "~2.0.3"
+  }
+}

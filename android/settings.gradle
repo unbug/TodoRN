@@ -1,0 +1,3 @@
+rootProject.name = 'TodoRN'
+
+include ':app'

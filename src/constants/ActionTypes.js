@@ -1,0 +1,1 @@
+export const SWITCH_MAIN_TAB = 'SWITCH_MAIN_TAB';
