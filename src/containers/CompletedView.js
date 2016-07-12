@@ -9,13 +9,12 @@ import {
 import {
   Header,
   Main,
-} from '../components/home-view';
+} from '../components/completed-view';
 import Actions from '../actions';
 
-class HomeView extends Component {
+class CompletedView extends Component {
   render() {
     const { actions } = this.props;
-
     return (
       <View style={styles.container}>
         <Header></Header>
@@ -46,5 +45,5 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomeView);
+)(CompletedView);
 

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Utils from '../../utils';
+
 import {
   StyleSheet,
   Text,
@@ -7,16 +9,63 @@ import {
   Image,
   Dimensions
 } from 'react-native';
-import {COLOR_BROWN} from '../../constants/Theme';
+import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
 
 class ListItem extends Component {
+  constructor(props){
+    super(props);
+    this.state = {timer: '', warning: false};
+  }
+  componentDidMount(){
+    this.startTimer();
+  }
+  componentWillUnmount(){
+    this.endTimer();
+  }
+  startTimer = ()=>{
+    var endTime = new Date(this.props.data.endTime),
+      timer = Utils.DateHandler.fromNowTo(endTime);
+    if(endTime.getTime()-new Date().getTime()){
+      var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<50;
+      this.setState({timer: timer.hour+':'+timer.minute+(warning?(':'+timer.second):''), warning: warning});
+      this.looptimer = requestAnimationFrame(this.startTimer);
+    }else{
+      this.setState({timer: 'completed', warning: false});
+    }
+  }
+  endTimer(){
+    this.looptimer && cancelAnimationFrame(this.looptimer);
+  }
+
+  handleCompleted = ()=>{
+    if(this.state.timer==='completed'){
+      this.setState({timer: '', warning: false});
+      this.startTimer();
+    }else{
+      this.endTimer();
+      this.setState({timer: 'completed', warning: false});
+    }
+  }
+
   render() {
+    var self = this;
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
-        <TouchableHighlight>
-          <Image style={styles.btnIcon} source={require('./img/ok.png')}/>
+        <TouchableHighlight
+          activeOpacity={ACTIVE_OPACITY}
+          underlayColor='transparent'
+          onPress={this.handleCompleted}>
+          <Image style={styles.btnIcon} source={
+            (self.props.data.completed||self.state.timer==='completed')
+            ?require('./img/ok_filled.png')
+            :require('./img/ok.png')}/>
         </TouchableHighlight>
-        <View style={styles.body}><Text style={styles.text}>{this.props.data.title}</Text></View>
+        <TouchableHighlight activeOpacity={ACTIVE_OPACITY}
+                            underlayColor='transparent'
+                            style={styles.body} onPress={()=>{}}>
+          <Text style={styles.text}>{this.props.data.title}</Text>
+        </TouchableHighlight>
+        <Text style={[styles.timer, {color: this.state.warning?COLOR_RED:'#000'}]}>{this.state.timer}</Text>
       </View>
     );
   }
@@ -28,15 +77,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 15,
-    paddingBottom: 15,
     borderBottomWidth: 1,
     borderBottomColor: COLOR_BROWN
   },
   body: {
     flex: 1,
-    paddingLeft: 10,
-    paddingRight: 10
+    padding: 15,
   },
   btnIcon: {
     width: 24,
@@ -44,6 +90,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16
+  },
+  timer: {
+    fontSize: 12,
+    fontStyle: 'italic'
   }
 });
 

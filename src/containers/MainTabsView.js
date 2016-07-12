@@ -10,6 +10,7 @@ import {
   Image
 } from 'react-native';
 import HomeView from './HomeView';
+import CompletedView from './CompletedView';
 import BroswerView from './BroswerView';
 import Actions from '../actions';
 import TabNavigator from 'react-native-tab-navigator';
@@ -44,9 +45,7 @@ class MainTabsView extends Component {
           renderIcon={() => <Image source={require('../components/main-tabs-view/img/checked.png') }/>}
           renderSelectedIcon={() => <Image source={require('../components/main-tabs-view/img/checked_filled.png') }/>}
           >
-          <View style={styles.itemView}>
-            <Text>Completed is coming soon...</Text>
-          </View>
+          <CompletedView navigator={navigator}/>
         </TabNavigator.Item>
         <TabNavigator.Item
           title="Book"
@@ -55,9 +54,7 @@ class MainTabsView extends Component {
           renderIcon={() => <Image source={require('../components/main-tabs-view/img/bookmark.png') }/>}
           renderSelectedIcon={() => <Image source={require('../components/main-tabs-view/img/bookmark_filled.png') }/>}
           >
-          <View style={styles.itemView}>
-            <BroswerView url="https://unbug.gitbooks.io/react-native-training/content/" title="React Native Training"/>
-          </View>
+          <BroswerView url="https://unbug.gitbooks.io/react-native-training/content/" title="React Native Training"/>
         </TabNavigator.Item>
       </TabNavigator>
     );
