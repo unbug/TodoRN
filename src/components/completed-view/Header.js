@@ -4,20 +4,32 @@ import {
   Text,
   View,
   Image,
+  TouchableHighlight,
   Dimensions
 } from 'react-native';
+import {ACTIVE_OPACITY} from '../../constants/Theme';
+
 let {height, width} = Dimensions.get('window');
 
 class Header extends Component {
+  handleAdd = ()=>{
+    this.props.onEdit();
+  }
   render() {
     return (
       <View style={styles.container}>
         <Image style={styles.bg}
               source={require('./img/welldone.jpg')}>
           <Text style={[styles.text, styles.title]}>
-            69
+            {this.props.num}
           </Text>
-          <Image style={styles.add} source={require('./img/border_color.png')}/>
+          <TouchableHighlight
+            activeOpacity={ACTIVE_OPACITY}
+            underlayColor='transparent'
+            style={styles.add}
+            onPress={this.handleAdd}>
+            <Image source={require('./img/border_color.png')}/>
+          </TouchableHighlight>
         </Image>
       </View>
     );

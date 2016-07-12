@@ -13,12 +13,14 @@ import {
 import Actions from '../actions';
 
 class CompletedView extends Component {
+  handleEdit = ()=>{
+    this.props.navigator.push({name: 'edit_view'});
+  }
   render() {
-    const { actions } = this.props;
     return (
       <View style={styles.container}>
-        <Header></Header>
-        <Main></Main>
+        <Header onEdit={this.handleEdit} num={this.props.todos.length}/>
+        <Main {...this.props}/>
       </View>
     );
   }
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    banner: state.banner
+    todos: state.todos.filter(todo=> todo.completed)
   };
 }
 

@@ -1,3 +1,4 @@
 import * as  navigationActions from './navigation';
+import * as  todosActions from './todos';
 
-export default {...navigationActions};
+export default {...navigationActions, ...todosActions};

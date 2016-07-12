@@ -17,7 +17,11 @@ class ListItem extends Component {
     this.state = {timer: '', warning: false};
   }
   componentDidMount(){
-    this.startTimer();
+    if(this.props.data.completed){
+      this.setState({timer: 'completed', warning: false});
+    }else{
+      this.startTimer();
+    }
   }
   componentWillUnmount(){
     this.endTimer();
@@ -30,7 +34,7 @@ class ListItem extends Component {
       this.setState({timer: timer.hour+':'+timer.minute+(warning?(':'+timer.second):''), warning: warning});
       this.looptimer = requestAnimationFrame(this.startTimer);
     }else{
-      this.setState({timer: 'completed', warning: false});
+      this.handleCompleted();
     }
   }
   endTimer(){
@@ -38,17 +42,11 @@ class ListItem extends Component {
   }
 
   handleCompleted = ()=>{
-    if(this.state.timer==='completed'){
-      this.setState({timer: '', warning: false});
-      this.startTimer();
-    }else{
-      this.endTimer();
-      this.setState({timer: 'completed', warning: false});
-    }
+    this.endTimer();
+    this.props.actions.completeTodo(this.props.data.id);
   }
 
   render() {
-    var self = this;
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
         <TouchableHighlight
@@ -56,9 +54,9 @@ class ListItem extends Component {
           underlayColor='transparent'
           onPress={this.handleCompleted}>
           <Image style={styles.btnIcon} source={
-            (self.props.data.completed||self.state.timer==='completed')
-            ?require('./img/ok_filled.png')
-            :require('./img/ok.png')}/>
+            this.state.timer==='completed'
+            ?require('./img/checked_filled.png')
+            :require('./img/checked.png')}/>
         </TouchableHighlight>
         <TouchableHighlight activeOpacity={ACTIVE_OPACITY}
                             underlayColor='transparent'

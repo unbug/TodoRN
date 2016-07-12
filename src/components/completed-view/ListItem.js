@@ -12,22 +12,14 @@ import {
 import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
 
 class ListItem extends Component {
-  constructor(props){
-    super(props);
-  }
-  componentDidMount(){
-  }
-  componentWillUnmount(){
-  }
-
   render() {
     var self = this;
     function getTimer() {
-      return Utils.DateHandler.timeLogFromNowTo(new Date(self.props.data.endTime));
+      return Utils.DateHandler.timeLogFromNowTo(new Date(self.props.data.completedTime||self.props.data.endTime));
     }
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
-        <Image style={styles.btnIcon} source={require('./img/ok_filled.png')}/>
+        <Image style={styles.btnIcon} source={require('./img/checked_filled.png')}/>
         <TouchableHighlight activeOpacity={ACTIVE_OPACITY}
                             underlayColor='transparent'
                             style={styles.body} onPress={()=>{}}>

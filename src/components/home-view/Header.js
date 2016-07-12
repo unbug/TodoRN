@@ -4,12 +4,17 @@ import {
   Text,
   View,
   Image,
-  Dimensions
+  Dimensions,
+  TouchableHighlight
 } from 'react-native';
+import {ACTIVE_OPACITY} from '../../constants/Theme';
 
 let {height, width} = Dimensions.get('window');
 
 class Header extends Component {
+  handleAdd = ()=>{
+    this.props.onEdit();
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -22,7 +27,13 @@ class Header extends Component {
           <Text style={[styles.text, styles.subTitle]}>
             React+Redux DEMO for React Native Training
           </Text>
-          <Image style={styles.add} source={require('./img/border_color.png')}/>
+          <TouchableHighlight
+            activeOpacity={ACTIVE_OPACITY}
+            underlayColor='transparent'
+            style={styles.add}
+            onPress={this.handleAdd}>
+            <Image source={require('./img/border_color.png')}/>
+          </TouchableHighlight>
         </Image>
       </View>
     );

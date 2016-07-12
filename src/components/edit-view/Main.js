@@ -1,22 +1,57 @@
 import React, {Component} from 'react';
+import Utils from '../../utils';
 import {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight,
-  Image,
+  TextInput,
+  Picker,
   Dimensions
 } from 'react-native';
-import { ACTIVE_OPACITY } from '../../constants/Theme';
+import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../constants/Theme';
 let {height, width} = Dimensions.get('window');
 
+const nowHour = new Date().getHours();
+
 class Main extends Component {
+  constructor(props){
+    super(props);
+    this.state = {title: '', hour: nowHour}
+  }
+  handleUpdate = ()=>{
+    this.props.onUpdate(this.state);
+  }
   render() {
-    console.log('some text');
-    const { actions } = this.props;
+    function getPickerItems() {
+      var list = [];
+      for(var i=nowHour;i<24;i++){
+        list.push(<Picker.Item label={i+''} value={i} key={Utils.GUID()}/>);
+      }
+      return list;
+    }
     return (
       <View style={styles.container}>
-
+        <Text style={styles.text}>Todo</Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => {
+            this.setState({title:text});
+            this.handleUpdate()
+          }}
+          value={this.state.title}/>
+        <Text style={styles.text}>
+          Hour
+        </Text>
+        <View style={styles.pickerWrap}>
+          <Picker
+            selectedValue={this.state.hour}
+            onValueChange={(val) => {
+              this.setState({hour: val});
+              this.handleUpdate()
+            }}>
+            {getPickerItems()}
+          </Picker>
+        </View>
       </View>
     );
   }
@@ -24,35 +59,29 @@ class Main extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative',
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    padding: 40
   },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingLeft: 158/750*width,
-    paddingRight: 158/750*width,
-    paddingBottom: 80/2
+  text: {
+    color: COLOR_BROWN,
+    fontSize: 20,
+    marginTop: 20,
+    marginBottom: 5,
+    textAlign: 'left'
   },
-  button: {
-    alignItems: 'center'
+  input: {
+    height: 40,
+    padding: 10,
+    borderColor: COLOR_BROWN,
+    borderWidth: 1,
+    borderRadius: 4,
+    color: '#000'
   },
-  buttonText: {
-    paddingTop: 16/2,
-    color: '#b2b2b2'
-  },
-  link: {
-    position: 'absolute',
-    bottom: 0,
-    width: width,
-    alignItems: 'center',
-    paddingBottom: 66/2
-  },
-  linkText: {
-    color: '#71b0ea',
-    fontSize: 30/2
+  pickerWrap: {
+    borderColor: COLOR_BROWN,
+    borderWidth: 1,
+    borderRadius: 4
   }
 });
 

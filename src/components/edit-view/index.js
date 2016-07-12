@@ -1,4 +1,4 @@
-import Header from './Header';
+import Bar from './Bar';
 import Main from './Main';
 
-export { Header, Main };
+export { Bar, Main };
