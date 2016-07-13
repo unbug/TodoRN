@@ -18,22 +18,22 @@ import Actions from '../actions';
 class HomeView extends Component {
   constructor(props){
     super(props);
-    this.state = {forData: {}}
   }
+  forData = {};
   hide = ()=>{
     this.props.navigator.pop();
   }
   handleUpdate = (data)=>{
-    this.setState({forData: data});
+    this.forData = data;
   }
   handleCancel = ()=>{
     this.hide();
   }
   handleOK = ()=>{
     if(this.props.data){
-      this.props.actions.editTodo(this.props.data.id, this.state.forData.title, this.state.forData.hour);
+      this.props.actions.editTodo(this.props.data.id, this.forData.title, this.forData.hour);
     }else{
-      this.props.actions.addTodo(this.state.forData.title, this.state.forData.hour);
+      this.props.actions.addTodo(this.forData.title, this.forData.hour);
     }
     this.hide();
   }

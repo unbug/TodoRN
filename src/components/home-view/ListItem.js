@@ -16,6 +16,8 @@ class ListItem extends Component {
     super(props);
     this.state = {timer: '00:00:00', warning: false};
   }
+  looptimer = 0;
+  lastUpdateTime = 0;
   componentDidMount(){
     this.startTimer();
   }
@@ -31,10 +33,14 @@ class ListItem extends Component {
   startTimer = ()=>{
     if(this.getCompleted()){ return;}
     var endTime = new Date(this.props.data.endTime),
-      timer = Utils.DateHandler.fromNowTo(endTime);
-    if(endTime.getTime()-new Date().getTime()){
-      var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<60;
-      this.setState({timer: timer.hour+':'+timer.minute+(warning?(':'+timer.second):''), warning: warning});
+      timer = Utils.DateHandler.fromNowTo(endTime),
+      now = new Date().getTime();
+    if(endTime.getTime()-now){
+      if(now-this.lastUpdateTime>1000*60){
+        this.lastUpdateTime = now;
+        var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<30;
+        this.setState({timer: timer.hour+':'+timer.minute, warning: warning});
+      }
       this.looptimer = requestAnimationFrame(this.startTimer);
     }else{
       this.handleCompleted();

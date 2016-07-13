@@ -9,12 +9,10 @@ import {
   Dimensions
 } from 'react-native';
 import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../constants/Theme';
-let {height, width} = Dimensions.get('window');
 
 function getHour(time) {
   var d = time?new Date(time): new Date();
-
-  return d.getHours()+1;
+  return d.getHours()+(time?0:1);
 }
 
 class Main extends Component {
@@ -28,6 +26,9 @@ class Main extends Component {
     }
   }
   componentDidMount(){
+    this.handleUpdate();
+  }
+  componentDidUpdate(){
     this.handleUpdate();
   }
   handleUpdate = ()=>{
@@ -49,7 +50,6 @@ class Main extends Component {
           style={styles.input}
           onChangeText={(text) => {
             this.setState({title:text});
-            this.handleUpdate()
           }}
           value={this.state.title}/>
         <Text style={styles.text}>
@@ -60,7 +60,6 @@ class Main extends Component {
             selectedValue={this.state.hour}
             onValueChange={(val) => {
               this.setState({hour: val});
-              this.handleUpdate()
             }}>
             {getPickerItems()}
           </Picker>
