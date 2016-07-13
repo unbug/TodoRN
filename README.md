@@ -2,4 +2,10 @@ Readme
 =================
 React+Redux DEMO for [React Native Training](https://www.gitbook.com/book/unbug/react-native-training/details).Run `npm install` before get started.
 
-![simulator screen shot jul 11 2016 22 04 38](https://cloud.githubusercontent.com/assets/799578/16733293/85ce4a7e-47b3-11e6-8d8a-761a9d2f61f1.png)
+![wechat_1468420334](https://cloud.githubusercontent.com/assets/799578/16807078/b5ef19ee-4949-11e6-8d80-3b433ccb43a6.jpeg)
+
+![wechat_1468420333](https://cloud.githubusercontent.com/assets/799578/16807084/b8ffedb6-4949-11e6-810e-1b943a10e73d.jpeg)
+
+![wechat_1468420332](https://cloud.githubusercontent.com/assets/799578/16807092/be67bfea-4949-11e6-9fb6-302c6f09fbc4.jpeg)
+
+![wechat_1468420331](https://cloud.githubusercontent.com/assets/799578/16807094/c1045d58-4949-11e6-94f8-8ddd04fa4570.jpeg)
