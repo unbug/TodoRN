@@ -11,7 +11,14 @@ function getEndTime(hour) {
 const initialState = [
   {
     id: Utils.GUID(),
-    title: 'Good day!',
+    title: 'Make a todo!',
+    endTime: getEndTime(),
+    completedTime: 0,
+    completed: false
+  },
+  {
+    id: Utils.GUID(),
+    title: 'Complete a todo!',
     endTime: getEndTime(),
     completedTime: 0,
     completed: false
@@ -39,7 +46,7 @@ export default function todos(state = initialState, action) {
     case EDIT_TODO:
       return state.map(todo =>
         todo.id === action.id ?
-          Object.assign({}, todo, { text: action.text, hour: action.hour }) :
+          Object.assign({}, todo, { title: action.title, endTime: getEndTime(action.hour) }) :
           todo
       )
 

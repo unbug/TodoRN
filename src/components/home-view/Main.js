@@ -11,10 +11,11 @@ import ListItem from './ListItem';
 
 class Main extends Component {
   render() {
-    const { todos,actions } = this.props;
+    var self = this;
+    const { todos } = this.props;
     function getList() {
       return todos.map(function (key, idx) {
-        return <ListItem actions={actions} data={key} key={Utils.GUID()} isLast={idx==todos.length-1}/>;
+        return <ListItem {...self.props} data={key} key={key.id} isLast={idx===todos.length-1}/>;
       });
     }
     return (

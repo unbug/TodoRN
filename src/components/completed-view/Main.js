@@ -17,7 +17,7 @@ class Main extends Component {
     const { todos,actions } = this.props;
     function getList() {
       return todos.map(function (key, idx) {
-        return <ListItem actions={actions} data={key} key={Utils.GUID()} isLast={idx==todos.length-1}/>;
+        return <ListItem actions={actions} data={key} key={key.id} isLast={idx==todos.length-1}/>;
       });
     }
     return (

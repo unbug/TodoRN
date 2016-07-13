@@ -11,12 +11,24 @@ import {
 import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../constants/Theme';
 let {height, width} = Dimensions.get('window');
 
-const nowHour = new Date().getHours();
+function getHour(time) {
+  var d = time?new Date(time): new Date();
+
+  return d.getHours()+1;
+}
 
 class Main extends Component {
   constructor(props){
     super(props);
-    this.state = {title: '', hour: nowHour}
+    var data = this.props.data;
+    if(data){
+      this.state = {title: data.title, hour: getHour(data.endTime)}
+    }else{
+      this.state = {title: '', hour: getHour()}
+    }
+  }
+  componentDidMount(){
+    this.handleUpdate();
   }
   handleUpdate = ()=>{
     this.props.onUpdate(this.state);
@@ -24,7 +36,8 @@ class Main extends Component {
   render() {
     function getPickerItems() {
       var list = [];
-      for(var i=nowHour;i<24;i++){
+      list.push(<Picker.Item label={'0'} value={24} key={Utils.GUID()}/>);
+      for(var i=1;i<24;i++){
         list.push(<Picker.Item label={i+''} value={i} key={Utils.GUID()}/>);
       }
       return list;

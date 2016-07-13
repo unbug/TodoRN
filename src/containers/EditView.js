@@ -30,13 +30,17 @@ class HomeView extends Component {
     this.hide();
   }
   handleOK = ()=>{
-    this.props.actions.addTodo(this.state.forData.title, this.state.forData.hour);
+    if(this.props.data){
+      this.props.actions.editTodo(this.props.data.id, this.state.forData.title, this.state.forData.hour);
+    }else{
+      this.props.actions.addTodo(this.state.forData.title, this.state.forData.hour);
+    }
     this.hide();
   }
   render() {
     return (
       <Image style={styles.container} source={require('../components/edit-view/img/bg.png')}>
-        <Main onUpdate={this.handleUpdate}/>
+        <Main {...this.props} onUpdate={this.handleUpdate}/>
         <Bar onCancel={this.handleCancel} onOK={this.handleOK}/>
       </Image>
     );

@@ -20,11 +20,7 @@ class ListItem extends Component {
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
         <Image style={styles.btnIcon} source={require('./img/checked_filled.png')}/>
-        <TouchableHighlight activeOpacity={ACTIVE_OPACITY}
-                            underlayColor='transparent'
-                            style={styles.body} onPress={()=>{}}>
-          <Text style={styles.text}>{this.props.data.title}</Text>
-        </TouchableHighlight>
+        <Text style={[styles.body, styles.text]}>{this.props.data.title}</Text>
         <Text style={styles.timer}>{getTimer()}</Text>
       </View>
     );
