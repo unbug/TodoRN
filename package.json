@@ -17,5 +17,11 @@
     "redux-persist": "~1.5.0",
     "redux-thunk": "~1.0.3",
     "reselect": "~2.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "run-sequence": "^1.2.2"
   }
 }
