@@ -36,7 +36,7 @@ class ListItem extends Component {
       timer = Utils.DateHandler.fromNowTo(endTime),
       now = new Date().getTime();
     if(endTime.getTime()-now){
-      if(now-this.lastUpdateTime>1000*60){
+      if(now-this.lastUpdateTime>1000*30){
         this.lastUpdateTime = now;
         var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<30;
         this.setState({timer: timer.hour+':'+timer.minute, warning: warning});
