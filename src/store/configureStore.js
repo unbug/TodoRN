@@ -1,8 +1,9 @@
 import { applyMiddleware, createStore } from 'redux';
-import reducers from '../reducers';
+var thunk = require('redux-thunk');
 var createLogger = require('redux-logger');
 var {persistStore, autoRehydrate} = require('redux-persist');
 var {AsyncStorage} = require('react-native');
+import reducers from '../reducers';
 
 var isDebuggingInChrome = __DEV__ && !!window.navigator.userAgent;
 var logger = createLogger({
@@ -11,7 +12,7 @@ var logger = createLogger({
   duration: true,
 });
 
-var createAppStore = applyMiddleware(logger)(createStore);
+var createAppStore = applyMiddleware(thunk, logger)(createStore);
 
 export default function configureStore() {
   const store = createAppStore(reducers, undefined, autoRehydrate());
