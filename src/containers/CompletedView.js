@@ -34,7 +34,9 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos.filter(todo=> todo.completed)
+    todos: state.todos.filter(todo => {
+      return todo.completed || ((new Date().getTime()-new Date(todo.endTime).getTime())>0)
+    })
   };
 }
 

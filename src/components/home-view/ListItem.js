@@ -28,7 +28,7 @@ class ListItem extends Component {
     this.endTimer();
   }
   getCompleted = ()=>{
-    return this.props.data.completed || (new Date().getTime()-new Date(this.props.data.endTime).getTime()>0);
+    return this.props.data.completed || ((new Date().getTime()-new Date(this.props.data.endTime).getTime())>0);
   }
   startTimer = ()=>{
     if(this.getCompleted()){ return;}
@@ -66,7 +66,7 @@ class ListItem extends Component {
           underlayColor='transparent'
           onPress={this.handleCompleted}>
           <Image style={styles.btnIcon} source={
-            this.props.data.completed
+            this.getCompleted()
             ?require('./img/checked_filled.png')
             :require('./img/checked.png')}/>
         </TouchableHighlight>
