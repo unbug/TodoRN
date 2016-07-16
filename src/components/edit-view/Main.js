@@ -37,10 +37,10 @@ class Main extends Component {
   render() {
     function getPickerItems() {
       var list = [];
-      list.push(<Picker.Item label={'0'} value={24} key={Utils.GUID()}/>);
       for(var i=1;i<24;i++){
         list.push(<Picker.Item label={i+''} value={i} key={Utils.GUID()}/>);
       }
+      list.push(<Picker.Item label={'00'} value={24} key={Utils.GUID()}/>);
       return list;
     }
     return (
