@@ -41,7 +41,7 @@ class ListItem extends Component {
         if(this.props.num<3){
           this.setState({
             timer: timer.hour
-              +':'+timer.minute
+              +'.'+timer.minute
               +':'+timer.second,
             warning: warning
           });
@@ -49,7 +49,7 @@ class ListItem extends Component {
           this.lastUpdateTime = now;
           this.setState({
             timer: timer.hour
-              +':'+timer.minute,
+              +'.'+timer.minute,
             warning: warning
           });
         }
