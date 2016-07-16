@@ -15,7 +15,13 @@ class Main extends Component {
     const { todos } = this.props;
     function getList() {
       return todos.map(function (key, idx) {
-        return <ListItem {...self.props} data={key} key={key.id} isLast={idx===todos.length-1}/>;
+        return <ListItem {...self.props}
+                         data={key}
+                         key={key.id}
+                         len={todos.length}
+                         num={idx}
+                         isFirst={idx===0}
+                         isLast={idx===todos.length-1}/>;
       });
     }
     return (

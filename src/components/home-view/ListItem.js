@@ -36,10 +36,23 @@ class ListItem extends Component {
       timer = Utils.DateHandler.fromNowTo(endTime),
       now = new Date().getTime();
     if(endTime.getTime()-now){
-      if(now-this.lastUpdateTime>1000*30){
-        this.lastUpdateTime = now;
+      if(this.props.isVisible){
         var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<30;
-        this.setState({timer: timer.hour+':'+timer.minute, warning: warning});
+        if(this.props.num<3){
+          this.setState({
+            timer: timer.hour
+              +':'+timer.minute
+              +(':'+timer.second),
+            warning: warning
+          });
+        }else if(now-this.lastUpdateTime>1000*30){
+          this.lastUpdateTime = now;
+          this.setState({
+            timer: timer.hour
+              +':'+timer.minute,
+            warning: warning
+          });
+        }
       }
       this.looptimer = requestAnimationFrame(this.startTimer);
     }else{

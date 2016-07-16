@@ -13,11 +13,38 @@ import {
 import Actions from '../actions';
 
 class HomeView extends Component {
+  constructor(props){
+    super(props);
+    this.state = {isVisible: true}
+  }
+  componentDidMount(){
+    this.currentRoute = this.props.navigator.navigationContext.currentRoute;
+    this.bindEvents();
+  }
+  componentWillUnmount(){
+    this.unBindEvents();
+  }
+  bindEvents = ()=>{
+    this.willFocusSubscription  = this.props.navigator.navigationContext.addListener('willfocus', (event) => {
+      if (this.currentRoute !== event.data.route) {
+        this.setState({isVisible: false});
+      }
+    });
+    this.didFocusSubscription  = this.props.navigator.navigationContext.addListener('didfocus', (event) => {
+      if (this.currentRoute === event.data.route) {
+        this.setState({isVisible: true});
+      }
+    });
+  }
+  unBindEvents = ()=>{
+    this.willFocusSubscription.remove();
+    this.didFocusSubscription.remove();
+  }
   render() {
     return (
       <View style={styles.container}>
         <Header {...this.props}/>
-        <Main {...this.props} onEdit={this.handleEdit}/>
+        <Main {...this.props} isVisible={this.state.isVisible} onEdit={this.handleEdit}/>
       </View>
     );
   }
