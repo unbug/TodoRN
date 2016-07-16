@@ -14,8 +14,8 @@ import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
 class ListItem extends Component {
   handleDelete = ()=>{
     Alert.alert(
-      'Confirm',
-      'Are you sure?',
+      'Delete item?',
+      'This cannot be undone.',
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
         {text: 'Yes', onPress: () => this.props.actions.deleteTodo(this.props.data.id)}
@@ -36,7 +36,7 @@ class ListItem extends Component {
           activeOpacity={ACTIVE_OPACITY}
           underlayColor='transparent'
           onPress={this.handleDelete}>
-          <Image style={styles.btnIcon} source={require('./img/cancel_2_filled.png')}/>
+          <Image style={styles.btnIcon} source={require('./img/erase.png')}/>
         </TouchableHighlight>
         <TouchableHighlight
           activeOpacity={ACTIVE_OPACITY}
