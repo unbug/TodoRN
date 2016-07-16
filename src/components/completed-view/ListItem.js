@@ -7,11 +7,24 @@ import {
   View,
   TouchableHighlight,
   Image,
-  Dimensions
+  Alert
 } from 'react-native';
 import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
 
 class ListItem extends Component {
+  handleDelete = ()=>{
+    Alert.alert(
+      'Cinfirm',
+      'Are you sure?',
+      [
+        {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'Yes', onPress: () => this.props.actions.deleteTodo(this.props.data.id)}
+      ]
+    )
+  }
+  handleEdit = ()=>{
+    this.props.navigator.push({name: 'edit_view', data: this.props.data});
+  }
   render() {
     var self = this;
     function getTimer() {
@@ -19,8 +32,19 @@ class ListItem extends Component {
     }
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
-        <Image style={styles.btnIcon} source={require('./img/checked_filled.png')}/>
-        <Text style={[styles.body, styles.text]}>{this.props.data.title}</Text>
+        <TouchableHighlight
+          activeOpacity={ACTIVE_OPACITY}
+          underlayColor='transparent'
+          onPress={this.handleDelete}>
+          <Image style={styles.btnIcon} source={require('./img/cancel_2_filled.png')}/>
+        </TouchableHighlight>
+        <TouchableHighlight
+          activeOpacity={ACTIVE_OPACITY}
+          underlayColor='transparent'
+          style={styles.body}
+          onPress={this.handleEdit}>
+          <Text style={styles.text}>{this.props.data.title}</Text>
+        </TouchableHighlight>
         <Text style={styles.timer}>{getTimer()}</Text>
       </View>
     );

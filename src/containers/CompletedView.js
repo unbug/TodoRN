@@ -13,13 +13,10 @@ import {
 import Actions from '../actions';
 
 class CompletedView extends Component {
-  handleEdit = ()=>{
-    this.props.navigator.push({name: 'edit_view'});
-  }
   render() {
     return (
       <View style={styles.container}>
-        <Header onEdit={this.handleEdit} num={this.props.todos.length}/>
+        <Header {...this.props} num={this.props.todos.length}/>
         <Main {...this.props}/>
       </View>
     );

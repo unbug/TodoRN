@@ -56,7 +56,7 @@ class ListItem extends Component {
     this.props.actions.completeTodo(this.props.data.id);
   }
   handleEdit = ()=>{
-    this.props.onEdit(this.props.data);
+    this.props.navigator.push({name: 'edit_view', data: this.props.data});
   }
   render() {
     return (

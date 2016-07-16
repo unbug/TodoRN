@@ -13,13 +13,10 @@ import {
 import Actions from '../actions';
 
 class HomeView extends Component {
-  handleEdit = (data)=>{
-    this.props.navigator.push({name: 'edit_view', data: data});
-  }
   render() {
     return (
       <View style={styles.container}>
-        <Header onEdit={this.handleEdit}/>
+        <Header {...this.props}/>
         <Main {...this.props} onEdit={this.handleEdit}/>
       </View>
     );

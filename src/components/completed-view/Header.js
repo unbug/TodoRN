@@ -13,7 +13,7 @@ let {height, width} = Dimensions.get('window');
 
 class Header extends Component {
   handleAdd = ()=>{
-    this.props.onEdit();
+    this.props.navigator.push({name: 'edit_view'});
   }
   render() {
     return (
