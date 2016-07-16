@@ -42,7 +42,7 @@ class ListItem extends Component {
           this.setState({
             timer: timer.hour
               +':'+timer.minute
-              +(':'+timer.second),
+              +':'+timer.second,
             warning: warning
           });
         }else if(now-this.lastUpdateTime>1000*30){
