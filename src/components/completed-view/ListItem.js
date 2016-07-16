@@ -14,7 +14,7 @@ import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
 class ListItem extends Component {
   handleDelete = ()=>{
     Alert.alert(
-      'Cinfirm',
+      'Confirm',
       'Are you sure?',
       [
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
