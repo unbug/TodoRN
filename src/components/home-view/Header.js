@@ -42,11 +42,11 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: 480/2,
+    height: 240,
   },
   bg: {
     flex: 1,
-    height: 480/2,
+    height: 240,
     width: width,
     justifyContent: 'center',
     alignItems: 'center',
@@ -57,15 +57,15 @@ const styles = StyleSheet.create({
     height: 100
   },
   text: {
-    paddingTop: 10/2,
+    paddingTop: 5,
     color: '#fff',
-    fontSize: 30/2
+    fontSize: 15
   },
   title: {
-    fontSize: 80/2
+    fontSize: 40
   },
   subTitle: {
-    fontSize: 20/2,
+    fontSize: 10,
     fontStyle: 'italic'
   },
   add: {

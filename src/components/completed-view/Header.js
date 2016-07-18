@@ -38,11 +38,11 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: 480/2,
+    height: 240,
   },
   bg: {
     flex: 1,
-    height: 480/2,
+    height: 240,
     width: width,
     justifyContent: 'center',
     backgroundColor: 'transparent'

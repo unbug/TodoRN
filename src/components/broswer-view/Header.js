@@ -28,14 +28,14 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: 128/2,
+    height: 64,
     justifyContent: 'center',
     alignItems: 'flex-start',
-    paddingLeft: 40/2,
+    paddingLeft: 20,
     backgroundColor: '#262729'
   },
   backButton: {
-    paddingLeft: 46/2,
+    paddingLeft: 23,
     justifyContent: 'center',
   },
   text: {

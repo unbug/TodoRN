@@ -18,7 +18,7 @@ class TitleBar extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: 96/2,
+    height: 48,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLOR_GREEN
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 20,
     color: '#FFFFFF',
-    fontSize: 32/2
+    fontSize: 16
   }
 });
 
