@@ -28,7 +28,7 @@ class ListItem extends Component {
     this.endTimer();
   }
   getCompleted = ()=>{
-    return this.props.data.completed || ((new Date().getTime()-new Date(this.props.data.endTime).getTime())>0);
+    return this.props.data.completed || ((new Date().getTime()-new Date(this.props.data.endTime).getTime())>=0);
   }
   startTimer = ()=>{
     if(this.getCompleted()){ return;}
