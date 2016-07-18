@@ -25,7 +25,7 @@ class Header extends Component {
             Todo
           </Text>
           <Text style={[styles.text, styles.subTitle]}>
-            React+Redux DEMO for React Native Training
+            React Native+Redux DEMO for React Native Training
           </Text>
           <TouchableHighlight
             activeOpacity={ACTIVE_OPACITY}
