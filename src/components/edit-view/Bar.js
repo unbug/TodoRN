@@ -12,8 +12,8 @@ import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../const
 let {height, width} = Dimensions.get('window');
 
 class Bar extends Component {
-  handleOK = ()=>{
-    this.props.onOK();
+  handleSubmit = ()=>{
+    this.props.onSubmit();
   }
   handleCancel = ()=>{
     this.props.onCancel();
@@ -31,7 +31,7 @@ class Bar extends Component {
         <TouchableHighlight
           activeOpacity={ACTIVE_OPACITY}
           underlayColor='transparent'
-          onPress={this.handleOK}
+          onPress={this.handleSubmit}
           style={styles.btn}>
           <Image style={styles.btnIcon} source={require('./img/ok_filled.png')}/>
         </TouchableHighlight>

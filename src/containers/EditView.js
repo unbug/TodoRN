@@ -29,7 +29,7 @@ class HomeView extends Component {
   handleCancel = ()=>{
     this.hide();
   }
-  handleOK = ()=>{
+  handleSubmit = ()=>{
     if(this.props.data){
       this.props.actions.editTodo(this.props.data.id, this.forData.title, this.forData.hour);
     }else{
@@ -41,7 +41,7 @@ class HomeView extends Component {
     return (
       <Image style={styles.container} source={require('../components/edit-view/img/bg.png')}>
         <Main {...this.props} onUpdate={this.handleUpdate}/>
-        <Bar onCancel={this.handleCancel} onOK={this.handleOK}/>
+        <Bar onCancel={this.handleCancel} onSubmit={this.handleSubmit}/>
       </Image>
     );
   }
