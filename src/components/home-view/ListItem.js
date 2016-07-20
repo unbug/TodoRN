@@ -40,16 +40,13 @@ class ListItem extends Component {
         var warning = !(parseInt(timer.hour)) && parseInt(timer.minute)<30;
         if(this.props.num<3){
           this.setState({
-            timer: timer.hour
-              +':'+timer.minute
-              +':'+timer.second+'\'\'',
+            timer: `${timer.hour}:${timer.minute}:${timer.second}''`,
             warning: warning
           });
         }else if(now-this.lastUpdateTime>1000*30){
           this.lastUpdateTime = now;
           this.setState({
-            timer: timer.hour
-              +':'+timer.minute,
+            timer: `${timer.hour}:${timer.minute}`,
             warning: warning
           });
         }
