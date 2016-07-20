@@ -11,11 +11,10 @@ import ListItem from './ListItem';
 
 class Main extends Component {
   render() {
-    var self = this;
     const { todos } = this.props;
-    function getList() {
-      return todos.map(function (key, idx) {
-        return <ListItem {...self.props}
+    const getList = () => {
+      return todos.map((key, idx) => {
+        return <ListItem {...this.props}
                          data={key}
                          key={key.id}
                          len={todos.length}

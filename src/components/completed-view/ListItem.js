@@ -26,9 +26,8 @@ class ListItem extends Component {
     this.props.navigator.push({name: 'edit_view', data: this.props.data});
   }
   render() {
-    var self = this;
-    function getTimer() {
-      return Utils.DateHandler.timeLogFromNowTo(new Date(self.props.data.completedTime||self.props.data.endTime));
+    const getTimer = ()=>{
+      return Utils.DateHandler.timeLogFromNowTo(new Date(this.props.data.completedTime||this.props.data.endTime));
     }
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
