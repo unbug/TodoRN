@@ -9,7 +9,7 @@ import {
   Image,
   Alert
 } from 'react-native';
-import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
+import {Theme, BasicStyle} from '../../styles';
 
 class ListItem extends Component {
   handleDelete = ()=>{
@@ -32,17 +32,17 @@ class ListItem extends Component {
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           onPress={this.handleDelete}>
           <Image style={styles.btnIcon} source={require('./img/erase.png')}/>
         </TouchableHighlight>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           style={styles.body}
           onPress={this.handleEdit}>
-          <Text style={styles.text}>{this.props.data.title}</Text>
+          <Text style={BasicStyle.text}>{this.props.data.title}</Text>
         </TouchableHighlight>
         <Text style={styles.timer}>{getTimer()}</Text>
       </View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: COLOR_BROWN
+    borderBottomColor: Theme.color.brown
   },
   body: {
     flex: 1,
@@ -66,9 +66,6 @@ const styles = StyleSheet.create({
   btnIcon: {
     width: 24,
     height: 24
-  },
-  text: {
-    fontSize: 16
   },
   timer: {
     fontSize: 12,

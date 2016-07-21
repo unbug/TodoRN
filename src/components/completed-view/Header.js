@@ -7,7 +7,7 @@ import {
   TouchableHighlight,
   Dimensions
 } from 'react-native';
-import {ACTIVE_OPACITY} from '../../constants/Theme';
+import {Theme} from '../../styles';
 
 let {height, width} = Dimensions.get('window');
 
@@ -24,7 +24,7 @@ class Header extends Component {
             {this.props.num}
           </Text>
           <TouchableHighlight
-            activeOpacity={ACTIVE_OPACITY}
+            activeOpacity={Theme.active.opacity}
             underlayColor='transparent'
             style={styles.add}
             onPress={this.handleAdd}>

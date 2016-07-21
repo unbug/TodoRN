@@ -9,7 +9,7 @@ import {
   Image,
   Dimensions
 } from 'react-native';
-import {COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY} from '../../constants/Theme';
+import {Theme, BasicStyle} from '../../styles';
 
 class ListItem extends Component {
   constructor(props){
@@ -72,7 +72,7 @@ class ListItem extends Component {
     return (
       <View style={[styles.container, {borderBottomWidth: this.props.isLast?0:1}]}>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           onPress={this.handleCompleted}>
           <Image style={styles.btnIcon} source={
@@ -81,13 +81,13 @@ class ListItem extends Component {
             :require('./img/checked.png')}/>
         </TouchableHighlight>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           style={styles.body}
           onPress={this.handleEdit}>
-          <Text style={styles.text}>{this.props.data.title}</Text>
+          <Text style={BasicStyle.text}>{this.props.data.title}</Text>
         </TouchableHighlight>
-        <Text style={[styles.timer, {color: this.state.warning&&!this.getCompleted()?COLOR_RED:'#000'}]}>{this.getCompleted()?'completed':this.state.timer}</Text>
+        <Text style={[styles.timer, {color: this.state.warning&&!this.getCompleted()?Theme.color.red:'#000'}]}>{this.getCompleted()?'completed':this.state.timer}</Text>
       </View>
     );
   }
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: COLOR_BROWN
+    borderBottomColor: Theme.color.brown
   },
   body: {
     flex: 1,
@@ -109,9 +109,6 @@ const styles = StyleSheet.create({
   btnIcon: {
     width: 24,
     height: 24
-  },
-  text: {
-    fontSize: 16
   },
   timer: {
     fontSize: 12,

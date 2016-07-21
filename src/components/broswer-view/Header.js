@@ -7,14 +7,14 @@ import {
   Image
 } from 'react-native';
 
-import { ACTIVE_OPACITY } from '../../constants/Theme';
+import {Theme} from '../../styles';
 
 class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           onPress={()=>this.props.onBack()}>
           <Image
             style={styles.backButton}

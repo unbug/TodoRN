@@ -12,7 +12,7 @@ import {
   Main,
 } from '../components/edit-view';
 let {height, width} = Dimensions.get('window');
-import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../constants/Theme';
+import {Theme} from '../styles';
 import Actions from '../actions';
 
 class HomeView extends Component {

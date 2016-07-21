@@ -8,7 +8,7 @@ import {
   Picker,
   Dimensions
 } from 'react-native';
-import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../constants/Theme';
+import {Theme} from '../../styles';
 
 function getHour(time) {
   var d = time?new Date(time): new Date();
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     padding: 40
   },
   text: {
-    color: COLOR_BROWN,
+    color: Theme.color.brown,
     fontSize: 20,
     marginTop: 20,
     marginBottom: 5,
@@ -85,13 +85,13 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     padding: 10,
-    borderColor: COLOR_BROWN,
+    borderColor: Theme.color.brown,
     borderWidth: 1,
     borderRadius: 4,
     color: '#000'
   },
   pickerWrap: {
-    borderColor: COLOR_BROWN,
+    borderColor: Theme.color.brown,
     borderWidth: 1,
     borderRadius: 4
   }

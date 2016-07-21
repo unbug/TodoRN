@@ -7,7 +7,8 @@ import {
   Dimensions,
   TouchableHighlight
 } from 'react-native';
-import { COLOR_GREEN, COLOR_BROWN, COLOR_RED, ACTIVE_OPACITY } from '../../constants/Theme';
+
+import {Theme} from '../../styles';
 
 let {height, width} = Dimensions.get('window');
 
@@ -22,14 +23,14 @@ class Bar extends Component {
     return (
       <View style={styles.container}>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           onPress={this.handleCancel}
           style={styles.btn}>
           <Image style={styles.btnIcon} source={require('./img/cancel_filled.png')}/>
         </TouchableHighlight>
         <TouchableHighlight
-          activeOpacity={ACTIVE_OPACITY}
+          activeOpacity={Theme.active.opacity}
           underlayColor='transparent'
           onPress={this.handleSubmit}
           style={styles.btn}>

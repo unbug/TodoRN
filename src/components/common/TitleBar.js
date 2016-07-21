@@ -4,7 +4,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {COLOR_GREEN} from '../../constants/Theme';
+import {Theme} from '../../styles';
 
 class TitleBar extends Component {
   render() {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     height: 48,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: COLOR_GREEN
+    backgroundColor: Theme.color.green
   },
   text: {
     marginTop: 20,
