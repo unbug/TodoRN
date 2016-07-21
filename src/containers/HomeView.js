@@ -44,7 +44,7 @@ class HomeView extends Component {
     return (
       <View style={styles.container}>
         <Header {...this.props}/>
-        <Main {...this.props} isVisible={this.state.isVisible} onEdit={this.handleEdit}/>
+        <Main {...this.props} isVisible={this.state.isVisible}/>
       </View>
     );
   }
