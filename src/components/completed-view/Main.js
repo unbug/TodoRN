@@ -13,17 +13,17 @@ import {
 import ListItem from './ListItem';
 
 class Main extends Component {
-  render() {
+  renderList  = () =>{
     const { todos } = this.props;
-    const getList = () =>{
-      return todos.map((key, idx) => {
-        return <ListItem {...this.props} data={key} key={key.id} isLast={idx==todos.length-1}/>;
-      });
-    }
+    return todos.map((key, idx) => {
+      return <ListItem {...this.props} data={key} key={key.id} isLast={idx==todos.length-1}/>;
+    });
+  }
+  render() {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.list}>
-          {getList()}
+          {this.renderList()}
         </ScrollView>
       </View>
     );

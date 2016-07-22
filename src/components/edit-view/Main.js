@@ -34,15 +34,15 @@ class Main extends Component {
   handleUpdate = ()=>{
     this.props.onUpdate(this.state);
   }
-  render() {
-    function getPickerItems() {
-      var list = [];
-      for(var i=1;i<24;i++){
-        list.push(<Picker.Item label={i+''} value={i} key={Utils.GUID()}/>);
-      }
-      list.push(<Picker.Item label={'00'} value={24} key={Utils.GUID()}/>);
-      return list;
+  renderPickerItems() {
+    var list = [];
+    for(var i=1;i<24;i++){
+      list.push(<Picker.Item label={i+''} value={i} key={Utils.GUID()}/>);
     }
+    list.push(<Picker.Item label={'00'} value={24} key={Utils.GUID()}/>);
+    return list;
+  }
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Todo</Text>
@@ -61,7 +61,7 @@ class Main extends Component {
             onValueChange={(val) => {
               this.setState({hour: val});
             }}>
-            {getPickerItems()}
+            {this.renderPickerItems()}
           </Picker>
         </View>
       </View>
