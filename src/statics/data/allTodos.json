@@ -2,21 +2,19 @@
   "msg": "ok",
   "code": 1,
   "data": [
-    [
-      {
-        "id": "42e603f3-afcf-97e6-794d-51a75d3a53f1",
-        "title": "A todo from cloud!",
-        "endTime": 1468576853511,
-        "completedTime": 0,
-        "completed": false
-      },
-      {
-        "id": "3e08c039-a223-f62b-ee56-6b47d3c53be3",
-        "title": "Another todo from cloud!",
-        "endTime": 1468576853512,
-        "completedTime": 0,
-        "completed": false
-      }
-    ]
+    {
+      "id": "42e603f3-afcf-97e6-794d-51a75d3a53f1",
+      "title": "A todo from cloud!",
+      "endTime": 1468576853511,
+      "completedTime": 0,
+      "completed": false
+    },
+    {
+      "id": "3e08c039-a223-f62b-ee56-6b47d3c53be3",
+      "title": "Another todo from cloud!",
+      "endTime": 1468576853512,
+      "completedTime": 0,
+      "completed": false
+    }
   ]
 }

@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO } from '../constants/ActionTypes'
+import * as types from '../constants/ActionTypes';
 import Utils from '../utils';
 
 function getEndTime(hour) {
@@ -8,56 +8,78 @@ function getEndTime(hour) {
   return dt.getTime();
 }
 
-const initialState = [
-  {
-    id: Utils.GUID(),
-    title: 'Make a todo!',
-    endTime: getEndTime(),
-    completedTime: 0,
-    completed: false
-  },
-  {
-    id: Utils.GUID(),
-    title: 'Complete a todo!',
-    endTime: getEndTime(),
-    completedTime: 0,
-    completed: false
-  }
-]
+const initialState = {
+  isFetchingAllTodos: false,
+  data: [
+    {
+      id: Utils.GUID(),
+      title: 'Make a todo!',
+      endTime: getEndTime(),
+      completedTime: 0,
+      completed: false
+    },
+    {
+      id: Utils.GUID(),
+      title: 'Complete a todo!',
+      endTime: getEndTime(),
+      completedTime: 0,
+      completed: false
+    }
+  ]
+}
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
-    case ADD_TODO:
-      return [
-        {
-          id: Utils.GUID(),
-          title: action.title,
-          endTime: getEndTime(action.hour),
-          completed: false
-        },
-        ...state
-      ]
+    case types.START_FETCH_ALL_TODOS:
+      return Object.assign({}, state, {isFetchingAllTodos: true});
 
-    case DELETE_TODO:
-      return state.filter(todo =>
-        todo.id !== action.id
-      )
+    case types.FETCH_ALL_TODOS:
+      return Object.assign({}, state, {
+        isFetchingAllTodos: false,
+        data: action.data.data.reduce(function (pre, cur) {
+          //remove duplicates
+          !pre.find( key=> key.id===cur.id) && pre.push(cur);
+          return pre;
+        }, [...state.data])
+      });
 
-    case EDIT_TODO:
-      return state.map(todo =>
-        todo.id === action.id ?
-          Object.assign({}, todo, { title: action.title, endTime: getEndTime(action.hour) }) :
-          todo
-      )
+    case types.ADD_TODO:
+      return Object.assign({}, state, {
+        data: [
+          {
+            id: Utils.GUID(),
+            title: action.title,
+            endTime: getEndTime(action.hour),
+            completed: false
+          },
+          ...state.data
+        ]
+      });
 
-    case COMPLETE_TODO:
-      return state.map(todo => {
-        var now = new Date().getTime();
-        if(todo.id === action.id && (new Date(todo.endTime).getTime()-now)){
-          return Object.assign({}, todo, { completed: !todo.completed, completedTime: now });
-        }
-        return todo;
-      })
+    case types.DELETE_TODO:
+      return Object.assign({}, state, {
+        data: state.data.filter(todo => todo.id !== action.id)
+      });
+
+    case types.EDIT_TODO:
+      return Object.assign({}, state, {
+        data: state.data.map(todo =>
+          todo.id === action.id ?
+            Object.assign({}, todo, { title: action.title, endTime: getEndTime(action.hour) }) :
+            todo
+        )
+      });
+
+    case types.COMPLETE_TODO:
+      return Object.assign({}, state, {
+        data: state.data.map(todo => {
+          var now = new Date().getTime();
+          if(todo.id === action.id && (new Date(todo.endTime).getTime()-now)){
+            return Object.assign({}, todo, { completed: !todo.completed, completedTime: now });
+          }
+          return todo;
+        })
+      });
 
     default:
       return state

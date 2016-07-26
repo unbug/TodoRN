@@ -20,6 +20,8 @@ class HomeView extends Component {
   componentDidMount(){
     this.currentRoute = this.props.navigator.navigationContext.currentRoute;
     this.bindEvents();
+    //fetch data from server
+    this.props.actions.fetchAllTodos();
   }
   componentWillUnmount(){
     this.unBindEvents();
