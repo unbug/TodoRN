@@ -20,14 +20,14 @@ class HomeView extends Component {
     super(props);
   }
   forData = {};
-  hide = ()=>{
+  close = ()=>{
     this.props.navigator.pop();
   }
   handleUpdate = (data)=>{
     this.forData = data;
   }
   handleCancel = ()=>{
-    this.hide();
+    this.close();
   }
   handleSubmit = ()=>{
     if(this.props.data){
@@ -35,7 +35,7 @@ class HomeView extends Component {
     }else{
       this.props.actions.addTodo(this.forData.title, this.forData.hour);
     }
-    this.hide();
+    this.close();
   }
   render() {
     return (
