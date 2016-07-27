@@ -17,7 +17,7 @@ export function fetchAllTodos() {
       return Promise.resolve();
     }
 
-    //dispatch fetch start action
+    //dispatch start fetch action
     dispatch({type: types.START_FETCH_ALL_TODOS});
 
     //fetching
@@ -25,7 +25,7 @@ export function fetchAllTodos() {
     //response
     const data = await response.json();
 
-    //dispatch fetch end action
+    //dispatch end fetch action
     return dispatch({
       type: types.FETCH_ALL_TODOS,
       data

@@ -9,11 +9,7 @@ import MainTabsView from './MainTabsView';
 import EditView from './EditView';
 import BroswerView from './BroswerView';
 
-const ROUTES = {
-  main_tabs_view: MainTabsView,
-  broswer_view: BroswerView,
-  edit_view: EditView
-}
+const ROUTES = { MainTabsView,  BroswerView, EditView };
 
 class App extends Component {
   renderScene = (route, navigator) => {
@@ -22,7 +18,7 @@ class App extends Component {
   }
   configureScene = (route, routeStack) => {
     switch (route.name){
-      case 'edit_view':
+      case 'EditView':
         return Navigator.SceneConfigs.FloatFromBottom;
       default:
         return Navigator.SceneConfigs.PushFromRight;
@@ -33,7 +29,7 @@ class App extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="light-content"/>
         <Navigator
-          initialRoute={{name: 'main_tabs_view'}}
+          initialRoute={{name: 'MainTabsView'}}
           renderScene={this.renderScene}
           configureScene={this.configureScene}/>
       </View>

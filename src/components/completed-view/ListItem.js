@@ -23,7 +23,7 @@ class ListItem extends Component {
     )
   }
   handleEdit = ()=>{
-    this.props.navigator.push({name: 'edit_view', data: this.props.data});
+    this.props.navigator.push({name: 'EditView', data: this.props.data});
   }
   render() {
     const getTimer = ()=>{
