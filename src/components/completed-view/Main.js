@@ -15,6 +15,7 @@ import ListItem from './ListItem';
 class Main extends Component {
   renderList  = () =>{
     const { todos } = this.props;
+    if(!todos){ return null}
     return todos.map((key, idx) => {
       return <ListItem {...this.props} data={key} key={key.id} isLast={idx==todos.length-1}/>;
     });

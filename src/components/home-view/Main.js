@@ -12,6 +12,7 @@ import ListItem from './ListItem';
 class Main extends Component {
   renderList = () => {
     const { todos } = this.props;
+    if(!todos || !todos.data){ return null}
     return todos.data.map((key, idx) => {
       return <ListItem {...this.props}
                        data={key}

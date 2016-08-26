@@ -1,0 +1,143 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+from	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.es6.js	/^  Array.from = function(arrayLike \/*, mapFn, thisArg *\/) {$/;"	function	line:15
+Array.from	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.es6.js	/^if (!Array.from) {$/;"	function	line:14
+findIndex	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.prototype.es6.js	/^function findIndex(predicate, context) {$/;"	function	line:11
+findIndex	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.prototype.es6.js	/^function findIndex(predicate, context) {$/;"	function	line:11
+value	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.prototype.es6.js	/^    value: function(predicate, context) {$/;"	function	line:45
+value	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Array.prototype.es6.js	/^    value: function (searchElement) {$/;"	function	line:63
+createRawReactElement	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^  return function createRawReactElement(type, key, props) {$/;"	function	line:22
+classCallCheck	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.classCallCheck = function (instance, Constructor) {$/;"	function	line:34
+babelHelpers.classCallCheck	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^})();$/;"	function	line:32
+defineProperties	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^  function defineProperties(target, props) {$/;"	function	line:41
+defineProperty	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.defineProperty = function (obj, key, value) {$/;"	function	line:58
+babelHelpers.defineProperty	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^})();$/;"	function	line:56
+get	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.get = function get(object, property, receiver) {$/;"	function	line:87
+babelHelpers.get	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:85
+get	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.get = function get(object, property, receiver) {$/;"	function	line:87
+inherits	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.inherits = function (subClass, superClass) {$/;"	function	line:112
+subClass	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^  }$/;"	class	line:115
+babelHelpers.inherits	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:110
+interopRequireDefault	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.interopRequireDefault = function (obj) {$/;"	function	line:128
+babelHelpers.interopRequireDefault	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:126
+interopRequireWildcard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.interopRequireWildcard = function (obj) {$/;"	function	line:134
+babelHelpers.interopRequireWildcard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:132
+objectWithoutProperties	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.objectWithoutProperties = function (obj, keys) {$/;"	function	line:151
+hasOwnProperty	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;$/;"	method	line:156
+babelHelpers.objectWithoutProperties	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:149
+possibleConstructorReturn	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.possibleConstructorReturn = function (self, call) {$/;"	function	line:163
+babelHelpers.possibleConstructorReturn	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:161
+sliceIterator	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^  function sliceIterator(arr, i) {$/;"	function	line:172
+taggedTemplateLiteral	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.taggedTemplateLiteral = function (strings, raw) {$/;"	function	line:209
+babelHelpers.taggedTemplateLiteral	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^})();$/;"	function	line:207
+toArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.toArray = function (arr) {$/;"	function	line:217
+babelHelpers.toArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:215
+toConsumableArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^babelHelpers.toConsumableArray = function (arr) {$/;"	function	line:221
+babelHelpers.toConsumableArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/babelHelpers.js	/^};$/;"	function	line:219
+inspect	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function inspect(obj, opts) {$/;"	function	line:43
+stylizeNoColor	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function stylizeNoColor(str, styleType) {$/;"	function	line:51
+arrayToHash	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function arrayToHash(array) {$/;"	function	line:55
+formatValue	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function formatValue(ctx, value, recurseTimes) {$/;"	function	line:66
+formatPrimitive	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function formatPrimitive(ctx, value) {$/;"	function	line:159
+formatError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function formatError(value) {$/;"	function	line:178
+formatArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {$/;"	function	line:183
+formatProperty	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {$/;"	function	line:203
+reduceToSingleString	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function reduceToSingleString(output, base, braces) {$/;"	function	line:262
+isArray	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isArray(ar) {$/;"	function	line:285
+isBoolean	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isBoolean(arg) {$/;"	function	line:289
+isNull	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isNull(arg) {$/;"	function	line:293
+isNullOrUndefined	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isNullOrUndefined(arg) {$/;"	function	line:297
+isNumber	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isNumber(arg) {$/;"	function	line:301
+isString	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isString(arg) {$/;"	function	line:305
+isSymbol	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isSymbol(arg) {$/;"	function	line:309
+isUndefined	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isUndefined(arg) {$/;"	function	line:313
+isRegExp	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isRegExp(re) {$/;"	function	line:317
+isObject	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isObject(arg) {$/;"	function	line:321
+isDate	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isDate(d) {$/;"	function	line:325
+isError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isError(e) {$/;"	function	line:329
+isFunction	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isFunction(arg) {$/;"	function	line:334
+isPrimitive	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function isPrimitive(arg) {$/;"	function	line:338
+objectToString	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function objectToString(o) {$/;"	function	line:347
+hasOwnProperty	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function hasOwnProperty(obj, prop) {$/;"	function	line:351
+OBJECT_COLUMN_NAME	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^var OBJECT_COLUMN_NAME = '(index)';$/;"	variable	line:359
+LOG_LEVELS.trace	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^var LOG_LEVELS = {$/;"	property	line:360
+LOG_LEVELS.info	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  trace: 0,$/;"	property	line:361
+LOG_LEVELS.warn	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  info: 1,$/;"	property	line:362
+LOG_LEVELS.error	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  warn: 2,$/;"	property	line:363
+setupConsole	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^function setupConsole(global) {$/;"	function	line:367
+getNativeLogFunction	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function getNativeLogFunction(level) {$/;"	function	line:372
+setupConsole.getNativeLogFunction	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function getNativeLogFunction(level) {$/;"	function	line:372
+setupConsole	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^function setupConsole(global) {$/;"	function	line:367
+repeat	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  var repeat = function(element, n) {$/;"	function	line:394
+repeat	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  var repeat = function(element, n) {$/;"	function	line:394
+consoleTablePolyfill	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function consoleTablePolyfill(rows) {$/;"	function	line:398
+joinRow	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^    var joinRow = function(row, space) {$/;"	function	line:434
+consoleTablePolyfill.joinRow	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^    var joinRow = function(row, space) {$/;"	function	line:434
+consoleTablePolyfill	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  function consoleTablePolyfill(rows) {$/;"	function	line:398
+originalConsole	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  var originalConsole = global.console;$/;"	variable	line:462
+console.error	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/console.js	/^  var console = {$/;"	property	line:468
+ErrorUtils._inGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^var ErrorUtils = {$/;"	property	line:17
+ErrorUtils._globalHandler	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  _inGuard: 0,$/;"	property	line:18
+setGlobalHandler	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  setGlobalHandler: function(fun) {$/;"	function	line:20
+ErrorUtils.setGlobalHandler	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  _globalHandler: null,$/;"	method	line:19
+getGlobalHandler	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  getGlobalHandler: function() {$/;"	function	line:23
+ErrorUtils.getGlobalHandler	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:22
+reportError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  reportError: function(error) {$/;"	function	line:26
+ErrorUtils.reportError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:25
+reportFatalError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  reportFatalError: function(error) {$/;"	function	line:29
+ErrorUtils.reportFatalError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:28
+applyWithGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  applyWithGuard: function(fun, context, args) {$/;"	function	line:32
+ErrorUtils.applyWithGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:31
+applyWithGuardIfNeeded	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  applyWithGuardIfNeeded: function(fun, context, args) {$/;"	function	line:42
+ErrorUtils.applyWithGuardIfNeeded	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:41
+inGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  inGuard: function() {$/;"	function	line:49
+ErrorUtils.inGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:48
+guard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  guard: function(fun, name, context) {$/;"	function	line:52
+ErrorUtils.guard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  },$/;"	method	line:51
+guarded	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^    function guarded() {$/;"	function	line:58
+ErrorUtils.guard.guarded	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^    function guarded() {$/;"	function	line:58
+setupErrorGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^function setupErrorGuard() {$/;"	function	line:80
+onError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  var onError = function(e) {$/;"	function	line:81
+setupErrorGuard.onError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^  var onError = function(e) {$/;"	function	line:81
+setupErrorGuard	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/error-guard.js	/^function setupErrorGuard() {$/;"	function	line:80
+isNaN	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Number.es6.js	/^    value: function isNaN(value) {$/;"	function	line:34
+entries	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Object.es7.js	/^    Object.entries = function(object) {$/;"	function	line:18
+Object.entries	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Object.es7.js	/^  if (typeof Object.entries !== 'function') {$/;"	function	line:17
+values	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Object.es7.js	/^    Object.values = function(object) {$/;"	function	line:40
+Object.values	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/Object.es7.js	/^  if (typeof Object.values !== 'function') {$/;"	function	line:39
+assign	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/polyfills.js	/^Object.assign = function(target, sources) {$/;"	function	line:19
+Object.assign	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/polyfills.js	/^\/**$/;"	function	line:0
+define	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function define(moduleId, factory) {$/;"	function	line:20
+modules.hasError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^    factory,$/;"	property	line:27
+modules.isInitialized	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^    hasError: false,$/;"	property	line:28
+modules.exports	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^    isInitialized: false,$/;"	property	line:29
+define	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function define(moduleId, factory) {$/;"	function	line:20
+require	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function require(moduleId) {$/;"	function	line:43
+require	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function require(moduleId) {$/;"	function	line:43
+guardedLoadModule	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function guardedLoadModule(moduleId, module) {$/;"	function	line:53
+guardedLoadModule	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function guardedLoadModule(moduleId, module) {$/;"	function	line:53
+loadModuleImplementation	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function loadModuleImplementation(moduleId, module) {$/;"	function	line:69
+loadModuleImplementation	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function loadModuleImplementation(moduleId, module) {$/;"	function	line:69
+unknownModuleError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function unknownModuleError(id) {$/;"	function	line:141
+unknownModuleError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function unknownModuleError(id) {$/;"	function	line:141
+moduleThrewError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function moduleThrewError(id) {$/;"	function	line:150
+moduleThrewError	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^function moduleThrewError(id) {$/;"	function	line:150
+require.Systrace.beginEvent	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^  require.Systrace = { beginEvent: () => {}, endEvent: () => {} };$/;"	property	line:155
+createHotReloadingObject	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^  var createHotReloadingObject = function() {$/;"	function	line:158
+const.acceptCallback	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^    const hot = {$/;"	property	line:159
+const.accept	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^      acceptCallback: null,$/;"	property	line:160
+createHotReloadingObject	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^  var createHotReloadingObject = function() {$/;"	function	line:158
+const	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js	/^  };$/;"	function	line:164
+startsWith	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.startsWith = function(search) {$/;"	function	line:14
+String	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^if (!String.prototype.startsWith) {$/;"	class	line:13
+String.startsWith	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.startsWith = function(search) {$/;"	method	line:14
+endsWith	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.endsWith = function(search) {$/;"	function	line:28
+String.endsWith	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.endsWith = function(search) {$/;"	method	line:28
+repeat	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.repeat = function(count) {$/;"	function	line:48
+String.repeat	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.repeat = function(count) {$/;"	method	line:48
+includes	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.includes = function(search, start) {$/;"	function	line:75
+String.includes	/Users/unbug/WebSpace/lab/TodoRN/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/String.prototype.es6.js	/^  String.prototype.includes = function(search, start) {$/;"	method	line:75

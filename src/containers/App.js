@@ -9,7 +9,7 @@ import MainTabsView from './MainTabsView';
 import EditView from './EditView';
 import BroswerView from './BroswerView';
 
-const ROUTES = { MainTabsView,  BroswerView, EditView };
+const ROUTES = { MainTabsView, BroswerView, EditView };
 
 class App extends Component {
   renderScene = (route, navigator) => {

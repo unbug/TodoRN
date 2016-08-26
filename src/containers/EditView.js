@@ -12,7 +12,6 @@ import {
   Main,
 } from '../components/edit-view';
 let {height, width} = Dimensions.get('window');
-import {Theme} from '../styles';
 import Actions from '../actions';
 
 class HomeView extends Component {
