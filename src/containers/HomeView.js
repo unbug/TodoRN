@@ -21,9 +21,9 @@ class HomeView extends Component {
     this.currentRoute = this.props.navigator.navigationContext.currentRoute;
     this.bindEvents();
 
-    //todo: run gulp before uncommone this
+    //todo: run gulp before uncomment this
     //fetch data from server
-    //this.props.actions.fetchAllTodos();
+    this.props.actions.fetchAllTodos();
   }
   componentWillUnmount(){
     this.unBindEvents();
