@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "react": "^15.3.0",
-    "react-native": "^0.32.0",
+    "react-native": "^0.35.0",
     "react-native-tab-navigator": "^0.3.2",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
