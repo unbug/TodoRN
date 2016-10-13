@@ -4,6 +4,8 @@ React Native+Redux DEMO for [React Native Training](https://www.gitbook.com/book
 
 Run `npm install` before get started.
 
+See [React Native Getting started](https://facebook.github.io/react-native/docs/getting-started.html#content)
+
 Start server apis run `gulp`.
 
 If you've ran the old TodoRN version, uncomment this in `src/store/configureStore.js` before get started.
